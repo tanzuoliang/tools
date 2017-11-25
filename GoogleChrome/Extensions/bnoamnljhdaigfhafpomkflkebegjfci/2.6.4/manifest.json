@@ -1,0 +1,41 @@
+{
+        "manifest_version": 2,
+	"background":
+	{
+		"page":"background.html"
+	},
+	"name":"__MSG_name__",
+	"description": "__MSG_description__",
+	"version": "2.6.4",
+	"default_locale": "zh_CN",
+
+	"icons": 
+	{
+		"16": "images/menu_logo.png",
+		"32": "images/logo32.png",
+		"48": "images/extension_logo.png",
+		"128": "images/install_logo.png"
+	},
+		
+	"content_scripts": 
+	[ 
+		{
+			"js": [ "js/xl.js" ],
+			"matches": [ "http://*/*", "https://*/*" ]
+		} 
+	],
+	
+	"permissions": 
+	[ 
+                "cookies",
+		"contextMenus", 
+		"tabs", 
+		"downloads", 
+		"http://*/*", 
+		"https://*/*" 
+	],
+        "plugins": [
+           { "path": "ThunderPlugIn.plugin", "public": true }
+         ]
+
+}
